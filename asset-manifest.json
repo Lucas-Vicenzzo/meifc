@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/meifc/static/css/main.073c9b0a.css",
+    "main.js": "/meifc/static/js/main.ad2d1f07.js",
+    "static/js/787.77267ff1.chunk.js": "/meifc/static/js/787.77267ff1.chunk.js",
+    "static/media/logo.svg": "/meifc/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/meifc/index.html",
+    "main.073c9b0a.css.map": "/meifc/static/css/main.073c9b0a.css.map",
+    "main.ad2d1f07.js.map": "/meifc/static/js/main.ad2d1f07.js.map",
+    "787.77267ff1.chunk.js.map": "/meifc/static/js/787.77267ff1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.ad2d1f07.js"
+  ]
+}
