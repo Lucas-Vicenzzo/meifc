@@ -7,6 +7,7 @@ export const Container = styled.div`
   height: 100%;
 
   .leaflet-container {
+    border-radius: 11px;
     flex-grow: 1;
   }
 `;

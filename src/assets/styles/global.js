@@ -5,6 +5,7 @@ export default createGlobalStyle`
   *{
     margin: unset;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif
   }
   body{
     background: #1a1a1a;

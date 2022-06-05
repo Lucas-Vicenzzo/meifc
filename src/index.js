@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Div100vh from 'react-div-100vh';
 import App from './App';
 
 import { Container } from './style';
@@ -7,9 +8,11 @@ import { Container } from './style';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Container>
-      <App />
-    </Container>
+    <Div100vh>
+      <Container>
+        <App />
+      </Container>
+    </Div100vh>
   </React.StrictMode>,
 );
 
