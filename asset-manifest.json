@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/meifc/static/js/main.96a1a241.js",
+    "main.css": "/meifc/static/css/main.4276fa8e.css",
+    "main.js": "/meifc/static/js/main.bdb0ff15.js",
     "index.html": "/meifc/index.html",
-    "main.96a1a241.js.map": "/meifc/static/js/main.96a1a241.js.map"
+    "main.4276fa8e.css.map": "/meifc/static/css/main.4276fa8e.css.map",
+    "main.bdb0ff15.js.map": "/meifc/static/js/main.bdb0ff15.js.map"
   },
   "entrypoints": [
-    "static/js/main.96a1a241.js"
+    "static/css/main.4276fa8e.css",
+    "static/js/main.bdb0ff15.js"
   ]
 }
