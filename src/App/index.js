@@ -3,11 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../assets/styles/global';
 import defaultTheme from '../assets/styles/themes/default';
 
-import Mapa from '../components/map';
-import Search from '../components/search';
-import Header from '../components/header';
-
-import Data from '../assets/data.json';
+import Layout from "../components/Layout";
 
 import { Container } from './style';
 
@@ -18,9 +14,7 @@ function App() {
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles />
       <Container>
-        <Search placeholder="Onde Gostaria de Ir?" data={Data} />
-        <Mapa />
-        <Header />
+        <Layout />
       </Container>
     </ThemeProvider>
   );
