@@ -6,7 +6,7 @@ import { Container } from "./style";
 export default function SearchResults() {
   return (
     <Container>
-      <h1> RESU USA PESQUISA</h1>
+      <h1> RESULTADO DA USA PESQUISA</h1>
       <MapResults />
     </Container>
   );
