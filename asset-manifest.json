@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/meifc/static/css/main.4276fa8e.css",
-    "main.js": "/meifc/static/js/main.3d147418.js",
-    "static/media/home.svg": "/meifc/static/media/home.edc8364dcdf2a527ae416f48221abf47.svg",
+    "main.js": "/meifc/static/js/main.6f4465c5.js",
+    "static/media/home.svg": "/meifc/static/media/home.52cd7b978accc57e48dff8b7ab516ac4.svg",
     "index.html": "/meifc/index.html",
-    "static/media/user.svg": "/meifc/static/media/user.9a23221de10b9e0677fa0679477b9294.svg",
-    "static/media/map-pointer.svg": "/meifc/static/media/map-pointer.044bd1450196693d2db2a7d9af8fce38.svg",
-    "static/media/searchIcon.svg": "/meifc/static/media/searchIcon.c0117819888cc087decf20277a3ebaca.svg",
+    "static/media/user.svg": "/meifc/static/media/user.89e507af601f596cfad0a11bee36a8d6.svg",
+    "static/media/map-pointer.svg": "/meifc/static/media/map-pointer.84acae1ddf3f6f1d3c3bdae07b97cddd.svg",
+    "static/media/searchIcon.svg": "/meifc/static/media/searchIcon.2734a60d5a89da25dc7b814b94bcdf7b.svg",
     "main.4276fa8e.css.map": "/meifc/static/css/main.4276fa8e.css.map",
-    "main.3d147418.js.map": "/meifc/static/js/main.3d147418.js.map"
+    "main.6f4465c5.js.map": "/meifc/static/js/main.6f4465c5.js.map"
   },
   "entrypoints": [
     "static/css/main.4276fa8e.css",
-    "static/js/main.3d147418.js"
+    "static/js/main.6f4465c5.js"
   ]
 }
