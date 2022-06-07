@@ -14,7 +14,7 @@ const bounds = [
   [-26.99815597827438, -48.64297243152386],
 ];
 
-function MapResults() {
+export default function MapResults() {
   const mapRef = useRef();
   useEffect(() => {
     const { current = {} } = mapRef;
@@ -94,5 +94,3 @@ function MapResults() {
     </Container>
   );
 };
-
-export default MapResults;

@@ -14,7 +14,7 @@ function Search({ placeholder, data }) {
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
     const formatedTerm = searchTerm.toLowerCase().replace(/ /g, '-');
-    history.push(`/:${formatedTerm}`);
+    history.push(`/search:${formatedTerm}`);
     console.log("search", searchTerm);
   };
 

@@ -9,7 +9,7 @@ export default function Routes() {
     <>
       <Route exact path="/" component={Mapa} />
       <Route path="/meifc" component={Mapa} />
-      <Route path="/:name" component={SearchResults} />
+      <Route path="/search:name" component={SearchResults} />
     </>
   );
 };
