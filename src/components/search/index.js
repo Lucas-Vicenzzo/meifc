@@ -11,6 +11,7 @@ function Search({ placeholder, data }) {
     setValue(event.target.value);
   };
 
+  // formata o termo buscado e interpola na url
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
     const formatedTerm = searchTerm.toLowerCase().replace(/ /g, '-');
@@ -32,8 +33,8 @@ function Search({ placeholder, data }) {
           return (
             searchTerm && title.startsWith(searchTerm) && title !== searchTerm
           );
-        }).slice(0, 5).map((item) => (
-          <div onClick={() => onSearch(item.title)} className="dropdonw-row" key={item.loc}>
+        }).slice(0, 6).map((item) => (
+          <div onClick={() => onSearch(item.title)} className="dropdown-row" key={item.loc}>
             {item.title}
           </div>
         ))}
