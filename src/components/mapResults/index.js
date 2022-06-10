@@ -74,7 +74,7 @@ export default function MapResults() {
     <Container>
       <Map
         ref={mapRef}
-        center={defaultCenter}
+        center=[-26.99815597827438, -48.64297243152386]
         minZoom={defaultMinZoom}
         zoom={defaultZoom}
         maxBounds={[
