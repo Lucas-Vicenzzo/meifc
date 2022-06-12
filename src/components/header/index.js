@@ -22,7 +22,7 @@ export default function Header() {
           <h1>meifc</h1>
         </Greetings>
         <div>
-          <img src={mapPointerIcon} alt="" />
+          <button><img src={mapPointerIcon} alt="" /></button>
           <button onClick={handleBackToHome}><img src={homeIcon} alt="" /></button>
         </div>
       </GreetingsHeader>

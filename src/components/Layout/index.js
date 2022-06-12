@@ -1,11 +1,7 @@
 import React from "react";
-import { Route, BrowserRouter } from "react-router-dom";
-
-import Data from '../../assets/data.json';
+import { BrowserRouter } from "react-router-dom";
 
 import Header from "../header";
-import Search from "../search";
-
 import Routes from "../../Routes";
 
 export default function Layout() {

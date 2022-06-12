@@ -8,7 +8,7 @@ export default createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     transition: background 0.3s ease-in-out;
   }
-  body{
+  body, html{
     background: #1a1a1a;
     font-size: 16px;
     width: 100vw;
@@ -18,10 +18,18 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    background-color: transparent;
+    border-radius: 40px;
+    border: none;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
     &:hover {
-        margin-top: -5px;
-        margin-bottom: 5px;
-        filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.81));
+      border-radius: 9px;
+      background-color: rgba(255, 255, 255, 0.17);
+      margin-top: -5px;
+      margin-bottom: 5px;
+      filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.81));
       }
   }
 `;

@@ -12,22 +12,28 @@ function Search({ placeholder, data }) {
     setValue(event.target.value);
   };
 
+  const clearInput = (e) => {
+    setValue(e.target.value)
+  };
+
   // formata o termo buscado e interpola na url
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
-    const formatedTerm = searchTerm.toLowerCase().replace(/ /g, '-');
-    history.push(`/search:${formatedTerm}`);
+    const searchTermId = data.find(element => element.title === searchTerm)
+    console.log(searchTerm)
+    history.push(`/search:${searchTermId.id}`);
   };
 
   return (
     <Container>
       <SearchInputs>
         <input type="text" placeholder={placeholder} value={value} onChange={onChange} />
-        <button onClick={() => onSearch(value)} type="submit"><i><img src={icon} alt="search icon" /></i></button>
+        <button onClick={() => {onSearch(value); setValue(() => ''); }} disabled={!value} type="submit"><i><img src={icon} alt="search icon" /></i></button>
       </SearchInputs>
-      <Dropdown data={data} value={value} />
+      <Dropdown data={data} value={value} returnedValue={setValue} clearInput={clearInput} />
     </Container>
 
   );
 };
+
 export default withRouter(Search);

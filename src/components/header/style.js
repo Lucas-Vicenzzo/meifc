@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 500px;
   height: 100%;
-  gap: 30px;
+  gap: 15px;
   @media screen and (max-width: 1024px) {
     width: 100%;
   }
@@ -28,17 +28,6 @@ export const GreetingsHeader = styled.header`
     display: flex;
     flex: row;
     gap: 10px;
-
-    button {
-      background: none;
-      border: none;
-      transition: all 0.2s ease-in-out;
-      &:hover {
-        margin-top: -5px;
-        margin-bottom: 5px;
-        filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.81));
-      }
-    }
   }
 `;
 

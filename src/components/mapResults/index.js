@@ -6,6 +6,8 @@ import "leaflet/dist/leaflet.css";
 
 import { Container } from "./style";
 
+import Data from '../../assets/data.json';
+
 const defaultCenter = [-27.016526114032356, -48.657304712972156];
 const defaultZoom = 20;
 const defaultMinZoom = 14;
@@ -42,7 +44,9 @@ export default function MapResults() {
   }, []);
 
   const params = useParams();
-  const fetchedParam = params.name;
+  const { id } = params;
+  console.log(id)
+
 
   /**
    * handleOnLocationFound

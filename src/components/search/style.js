@@ -42,14 +42,7 @@ export const SearchInputs = styled.div`
     justify-content: center;
     gap: 15px;
 
-    button {
-      background-color: transparent;
-      border: none;
-      width: 60px;
-      height: 60px;
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.17);
-        border-radius: 5px;
-      }
+    button:disabled {
+      opacity: 0.5;
     }
 `;
