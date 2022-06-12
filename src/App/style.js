@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 
@@ -12,9 +12,9 @@ export const Container = styled.div`
   padding: 25px;
   gap: 25px;
 
-  background: linear-gradient(119.05deg, #000A11 0%, #000E11 100%);
+  background: linear-gradient(356.9deg, #000000 3.78%, #14142B 69.17%);
 
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +26,7 @@ export const Container = styled.div`
     padding: 25px;
     gap: 25px;
 
-    background: linear-gradient(119.05deg, #000A11 0%, #000E11 100%);
+    background: linear-gradient(7.31deg, #000000 0%, #14142B 100%);
     }
 
 

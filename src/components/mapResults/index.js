@@ -43,7 +43,6 @@ export default function MapResults() {
 
   const params = useParams();
   const fetchedParam = params.name;
-  console.log({ fetchedParam });
 
   /**
    * handleOnLocationFound
