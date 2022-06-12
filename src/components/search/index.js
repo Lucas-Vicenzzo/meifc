@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useHistory, withRouter } from 'react-router-dom';
 import { Container, SearchInputs } from './style';
 
+import Dropdown from '../dropdown';
 import icon from '../../assets/imgs/searchIcon.svg';
 
 function Search({ placeholder, data }) {
@@ -25,20 +26,7 @@ function Search({ placeholder, data }) {
         <input type="text" placeholder={placeholder} value={value} onChange={onChange} />
         <button onClick={() => onSearch(value)} type="submit"><i><img src={icon} alt="search icon" /></i></button>
       </SearchInputs>
-      <div className="dropdown">
-        {data.filter((item) => {
-          const searchTerm = value.toLowerCase();
-          const title = item.title.toLowerCase();
-
-          return (
-            searchTerm && title.startsWith(searchTerm) && title !== searchTerm
-          );
-        }).slice(0, 6).map((item) => (
-          <div onClick={() => onSearch(item.title)} className="dropdown-row" key={item.loc}>
-            {item.title}
-          </div>
-        ))}
-      </div>
+      <Dropdown data={data} value={value} />
     </Container>
 
   );

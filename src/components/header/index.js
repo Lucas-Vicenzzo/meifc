@@ -1,23 +1,26 @@
-import {
-  Container, UserIcon, MapPointerIcon, HomeIcon,
-} from "./style";
+import Data from '../../assets/data.json';
 
-import userIcon from '../../assets/imgs/user.svg';
+import Search from '../search';
+
+import { Container, GreetingsHeader, Greetings } from "./style";
+
 import mapPointerIcon from '../../assets/imgs/map-pointer.svg';
 import homeIcon from '../../assets/imgs/home.svg';
 
 export default function Header() {
   return (
     <Container>
-      <UserIcon>
-        <img src={userIcon} alt="" />
-      </UserIcon>
-      <MapPointerIcon>
-        <img src={mapPointerIcon} alt="" />
-      </MapPointerIcon>
-      <HomeIcon>
-        <img src={homeIcon} alt="" />
-      </HomeIcon>
+      <GreetingsHeader>
+        <Greetings>
+          <welcome>Bem-vindo(a) ao</welcome>
+          <h1>meifc</h1>
+        </Greetings>
+        <div>
+          <img src={mapPointerIcon} alt="" />
+          <img src={homeIcon} alt="" />
+        </div>
+      </GreetingsHeader>
+      <Search placeholder="Onde Gostaria de Ir?" data={Data} />
     </Container>
   );
 };

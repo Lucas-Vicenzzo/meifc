@@ -11,9 +11,8 @@ import Routes from "../../Routes";
 export default function Layout() {
   return (
     <BrowserRouter>
-      <Search placeholder="Onde Gostaria de Ir?" data={Data} />
-      <Routes />
       <Header />
+      <Routes />
     </BrowserRouter>
   );
 };
