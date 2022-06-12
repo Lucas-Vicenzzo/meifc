@@ -43,9 +43,9 @@ export default function MapResults() {
     };
   }, []);
 
-  const params = useParams();
-  const { id } = params;
-  console.log(id)
+
+
+
 
 
   /**
@@ -73,11 +73,22 @@ export default function MapResults() {
     alert(`Unable to determine location: ${error.message}`);
   }
 
+  const params = useParams();
+  const { id } = params;
+
+  const formatedId = id.replace(/:/g, '');
+
+  const roomObj = Data.filter(obj => {
+    return obj.id == formatedId
+  })
+
+  console.log(roomObj[0].loc)
+
   return (
     <Container>
       <Map
         ref={mapRef}
-        center={[-26.99815597827438, -48.64297243152386]}
+        center={roomObj[0].loc}
         minZoom={defaultMinZoom}
         zoom={defaultZoom}
         maxBounds={[
