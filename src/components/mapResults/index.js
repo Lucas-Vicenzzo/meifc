@@ -1,12 +1,14 @@
 import React, { useRef, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import L from "leaflet";
-import { Map, TileLayer } from "react-leaflet";
+import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 import { Container } from "./style";
 
 import Data from '../../assets/data.json';
+
+import mapIcon from '../../assets/imgs/map-pointer.svg'
 
 const defaultCenter = [-27.016526114032356, -48.657304712972156];
 const defaultZoom = 20;
@@ -15,6 +17,12 @@ const bounds = [
   [-27.030384113005965, -48.68121530743459],
   [-26.99815597827438, -48.64297243152386],
 ];
+const markerIcon = new L.Icon({
+  iconUrl: mapIcon,
+  iconSize: [40, 45],
+  open: true,
+});
+
 
 export default function MapResults() {
   const mapRef = useRef();
@@ -83,6 +91,7 @@ export default function MapResults() {
   })
 
   console.log(roomObj[0].loc)
+  console.log(roomObj[0].andar)
 
   return (
     <Container>
@@ -99,12 +108,17 @@ export default function MapResults() {
         ]}
       >
         <TileLayer
-          url="http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}"
-          subdomains={["mt0", "mt1", "mt2", "mt3"]}
-          maxZoom={21}
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <Marker position={ roomObj[0].loc } icon={ markerIcon } >
+          <Popup>
+            <b>Seu destino está aqui. No {roomObj[0].andar} andar.</b>
+          </Popup>
+
+        </Marker>
       </Map>
+
     </Container>
   );
 };
