@@ -35,4 +35,28 @@ export const Container = styled.div`
   .leaflet-control-zoom {
     overflow: visible;
   }
+
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    color: white;
+    background: linear-gradient(264.52deg, #310071 0%, #000000 51.56%, rgba(0, 0, 0, 0.72) 100%) !important;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    b {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+  .leaflet-popup-close-button {
+    span {
+      width: 100px !important;
+      height: 100px !important;
+      color: white;
+    }
+  }
 `;

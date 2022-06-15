@@ -51,11 +51,6 @@ export default function MapResults() {
     };
   }, []);
 
-
-
-
-
-
   /**
    * handleOnLocationFound
    * @param {object} event Leaflet LocationEvent object
