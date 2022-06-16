@@ -1,4 +1,5 @@
 // exportação das váriaveis de estilo para a aplicação
+
 export default {
   colors: {
     background: '#F6F5FC',
@@ -11,4 +12,5 @@ export default {
       dark: '#3346F0',
     },
   },
+  fullscreen: {fullscreenIcon}
 };

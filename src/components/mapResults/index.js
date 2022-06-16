@@ -9,7 +9,6 @@ import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
 import { Container } from "./style";
 
 import Data from '../../assets/data.json';
-import mapIcon from '../../assets/imgs/classImgs/labRedes.png'
 
 const defaultCenter = [-27.016526114032356, -48.657304712972156];
 const defaultZoom = 19;

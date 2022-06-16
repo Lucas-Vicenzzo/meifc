@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const fullscreenIcon = require('../../assets/imgs/fullscreen.png').default1
-
 export const Container = styled.div`
   display: flex;
   flex-grow: 1;
@@ -13,14 +11,13 @@ export const Container = styled.div`
     flex-grow: 1;
   }
 
-  .leaflet-control-zoom-in, .leaflet-control-zoom-out {
+  /* .leaflet-control-zoom-in, .leaflet-control-zoom-out {
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(7.31deg, rgba(0, 0, 0, 0.63) 0%, #14142B 100%);
     box-shadow: -4px 6px 8px -4px rgba(111, 0, 255, 0.29);
-    border-radius: 9px;
-    border-radius: 5px !important;
+    border-radius: 9px !important;
     margin-bottom: 5px;
     width: 40px !important;
     height: 40px !important;
@@ -32,21 +29,68 @@ export const Container = styled.div`
     &:hover {
       width: 60px !important;
     }
+  } */
+
+  .leaflet-control-zoom-in, .leaflet-control-zoom-out {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background: linear-gradient(225deg, rgba(56, 56, 67, 0.9) 0%, rgba(73, 73, 88, 0.35) 100%);
+    margin-bottom: 5px;
+    border-radius: 9px !important;
+    border: none;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 10px;
+
+    span {
+      color: initial ;
+      transition: all 0.3s ease-out;
+    }
+    &:hover {
+      border-radius: 10px;
+      margin-right: -5px;
+      margin-left: 10px;
+      box-shadow: -3px 5px 4px rgba(0, 0, 0, 0.21);
+      span {
+        color: white
+      }
+      }
   }
 
   .leaflet-control-zoom {
     overflow: visible;
   }
+
   .leaflet-control-fullscreen {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(7.31deg, rgba(0, 0, 0, 0.63) 0%, #14142B 100%);
-    box-shadow: -4px 6px 8px -4px rgba(111, 0, 255, 0.29);
-    border-radius: 9px;
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background: linear-gradient(225deg, rgba(56, 56, 67, 0.9) 0%, rgba(73, 73, 88, 0.35) 100%);
+    border-radius: 9px !important;
+    margin-top: 0px;
+    border: none;
     width: 40px !important;
     height: 40px !important;
+    a {
+      background-color: transparent;
+      filter: invert(100%);
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
 
+    
+    &:hover {
+      border-radius: 10px;
+      margin-right: -5px;
+      margin-left: 10px;
+      box-shadow: -3px 5px 4px rgba(0, 0, 0, 0.21);
+
+      a {
+        filter: invert(0);
+      }
+    }
   }
 
   .leaflet-popup-content-wrapper, .leaflet-popup-tip {
