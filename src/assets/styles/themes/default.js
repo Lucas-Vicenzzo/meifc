@@ -12,5 +12,4 @@ export default {
       dark: '#3346F0',
     },
   },
-  fullscreen: {fullscreenIcon}
 };

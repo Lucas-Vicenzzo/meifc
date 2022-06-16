@@ -1,14 +1,19 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import L, { map } from "leaflet";
+import L, { icon, map } from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 import 'leaflet-fullscreen/dist/Leaflet.fullscreen.js';
 import "leaflet/dist/leaflet.css";
 import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Container } from "./style";
+import ModalPopup from "../popUp";
 
 import Data from '../../assets/data.json';
+import defaultMarker from '../../assets/imgs/map-pointer.svg'
 
 const defaultCenter = [-27.016526114032356, -48.657304712972156];
 const defaultZoom = 19;
@@ -23,14 +28,6 @@ export default function MapResults() {
   useEffect(() => {
     const { current = {} } = mapRef;
     const { leafletElement: map } = current;
-
-    // Commenting this out to avoid blocked location requests
-    // when embedded on the Egghead lesson page. To give this
-    // a try, simply uncomment out the function call below
-
-    // map.locate({
-    //   setView: true,
-    // });
 
     map.on("locationfound", handleOnLocationFound);
 
@@ -109,7 +106,8 @@ export default function MapResults() {
         />
         <Marker position={ roomObj[0].loc } icon={ markerIcon } >
           <Popup>
-            <b>Seu destino está aqui. No {roomObj[0].andar} andar.</b>
+            <span>Seu destino está aqui. No {roomObj[0].andar} andar.</span>
+            <ModalPopup />
           </Popup>
         </Marker>
       </Map>
