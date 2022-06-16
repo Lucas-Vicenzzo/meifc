@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const fullscreenIcon = require('../../assets/imgs/fullscreen.png').default1
+
 export const Container = styled.div`
   display: flex;
   flex-grow: 1;
@@ -15,14 +17,14 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(272.47deg, #6F00FF -59.23%, rgba(0, 0, 0, 0.76) 126.24%);
-    border: 1px solid rgba(0, 0, 0, 0.28);
-    box-shadow: 0px 13px 15px 3px rgba(0, 0, 0, 0.59);
+    background: linear-gradient(7.31deg, rgba(0, 0, 0, 0.63) 0%, #14142B 100%);
+    box-shadow: -4px 6px 8px -4px rgba(111, 0, 255, 0.29);
+    border-radius: 9px;
     border-radius: 5px !important;
     margin-bottom: 5px;
     width: 40px !important;
     height: 40px !important;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     span {
       color: white;
     }
@@ -35,10 +37,22 @@ export const Container = styled.div`
   .leaflet-control-zoom {
     overflow: visible;
   }
+  .leaflet-control-fullscreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(7.31deg, rgba(0, 0, 0, 0.63) 0%, #14142B 100%);
+    box-shadow: -4px 6px 8px -4px rgba(111, 0, 255, 0.29);
+    border-radius: 9px;
+    width: 40px !important;
+    height: 40px !important;
+
+  }
 
   .leaflet-popup-content-wrapper, .leaflet-popup-tip {
     color: white;
     background: linear-gradient(264.52deg, #310071 0%, #000000 51.56%, rgba(0, 0, 0, 0.72) 100%) !important;
+
     div {
       display: flex;
       align-items: center;
@@ -52,6 +66,11 @@ export const Container = styled.div`
       text-align: left;
     }
   }
+
+  .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: none;
+  }
+
   .leaflet-popup-close-button {
     span {
       width: 100px !important;

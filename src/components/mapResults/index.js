@@ -2,7 +2,9 @@ import React, { useRef, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import L, { map } from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import 'leaflet-fullscreen/dist/Leaflet.fullscreen.js';
 import "leaflet/dist/leaflet.css";
+import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
 
 import { Container } from "./style";
 
@@ -78,10 +80,7 @@ export default function MapResults() {
     return obj.id == formatedId
   })
 
-  const info = roomObj[0]
-  console.log("info.foto =", info.foto);
-
-  const iconPath = require(`../../assets/imgs/classImgs/${info.foto}`);
+  const iconPath = require(`../../assets/imgs/classImgs/${roomObj[0].foto}`);
 
   const markerIcon = new L.Icon({
     iconUrl: iconPath,
@@ -96,6 +95,7 @@ export default function MapResults() {
         center={roomObj[0].loc}
         minZoom={defaultMinZoom}
         zoom={defaultZoom}
+        fullscreenControl={true}
         maxBounds={[
           // south west
           [-27.030384113005965, -48.68121530743459],
@@ -103,6 +103,7 @@ export default function MapResults() {
           [-26.99815597827438, -48.64297243152386],
         ]}
       >
+
         <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -111,10 +112,8 @@ export default function MapResults() {
           <Popup>
             <b>Seu destino está aqui. No {roomObj[0].andar} andar.</b>
           </Popup>
-
         </Marker>
       </Map>
-
     </Container>
   );
 };
