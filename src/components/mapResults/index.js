@@ -1,28 +1,21 @@
 import React, { useRef, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import L from "leaflet";
+import L, { map } from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 import { Container } from "./style";
 
 import Data from '../../assets/data.json';
-
-import mapIcon from '../../assets/imgs/map-pointer.svg'
+import mapIcon from '../../assets/imgs/classImgs/labRedes.png'
 
 const defaultCenter = [-27.016526114032356, -48.657304712972156];
-const defaultZoom = 20;
+const defaultZoom = 19;
 const defaultMinZoom = 14;
 const bounds = [
   [-27.030384113005965, -48.68121530743459],
   [-26.99815597827438, -48.64297243152386],
 ];
-const markerIcon = new L.Icon({
-  iconUrl: mapIcon,
-  iconSize: [40, 45],
-  open: true,
-});
-
 
 export default function MapResults() {
   const mapRef = useRef();
@@ -85,8 +78,16 @@ export default function MapResults() {
     return obj.id == formatedId
   })
 
-  console.log(roomObj[0].loc)
-  console.log(roomObj[0].andar)
+  const info = roomObj[0]
+  console.log("info.foto =", info.foto);
+
+  const iconPath = require(`../../assets/imgs/classImgs/${info.foto}`);
+
+  const markerIcon = new L.Icon({
+    iconUrl: iconPath,
+    iconSize: [40, 45],
+    open: true,
+  });
 
   return (
     <Container>

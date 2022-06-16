@@ -3,7 +3,8 @@
   "id": 1,
   "loc": [-27.01537468200277,-48.65880534052849],
   "title": "Lab Hard",
-  "andar": "primeiro"
+  "andar": "primeiro",
+  "foto": "map-pointer.svg"
   },
   {
     "id": 2,
@@ -27,7 +28,8 @@
     "id": 5,
     "loc": [-27.015448757683938,-48.65871414542198],
     "title": "Lab Redes",
-    "andar": "segundo"
+    "andar": "segundo",
+    "foto": "labRedes.png"
   },
   {
     "id": 6,
