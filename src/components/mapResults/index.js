@@ -106,10 +106,11 @@ export default function MapResults() {
         <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        maxZoom={19.9}
         />
         <Marker position={ roomObj[0].loc } icon={ markerIcon } >
           <Popup>
-            <b>Seu destino está aqui. No {roomObj[0].andar} andar.</b>
+            <b>Seu destino está aqui: {roomObj[0].title}. No {roomObj[0].andar} andar; Bloco {roomObj[0].bloco}.</b>
           </Popup>
         </Marker>
       </Map>
