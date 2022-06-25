@@ -6,9 +6,14 @@ import 'leaflet-fullscreen/dist/Leaflet.fullscreen.js';
 import "leaflet/dist/leaflet.css";
 import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
 
+
 import { Container } from "./style";
 
 import Data from '../../assets/data.json';
+
+import icon from "./constants";
+
+import useGeoLocation from "./useGeoLocation";
 
 const defaultCenter = [-27.016526114032356, -48.657304712972156];
 const defaultZoom = 19;
@@ -87,6 +92,8 @@ export default function MapResults() {
     open: true,
   });
 
+  const location = useGeoLocation();
+
   return (
     <Container>
       <Map
@@ -113,6 +120,13 @@ export default function MapResults() {
             <b>Seu destino está aqui: {roomObj[0].title}. No {roomObj[0].andar} andar; Bloco {roomObj[0].bloco}.</b>
           </Popup>
         </Marker>
+        {location.loaded && !location.error && (
+            <Marker icon={ icon } position={[location.coordinates.lat, location.coordinates.lng]}>
+                <Popup>
+                  <b>Você está aqui.</b>
+                </Popup>
+            </Marker>
+        )}
       </Map>
     </Container>
   );
