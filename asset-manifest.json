@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/meifc/static/css/main.ae982843.css",
-    "main.js": "/meifc/static/js/main.7f649cea.js",
-    "static/media/labRedes.png": "/meifc/static/media/labRedes.7ae96be58425c097ea6d.png",
+    "main.js": "/meifc/static/js/main.5f7846fe.js",
+    "static/media/labRedes2.png": "/meifc/static/media/labRedes2.7ae96be58425c097ea6d.png",
+    "static/media/labRedes.png": "/meifc/static/media/labRedes.b9be242e07e707fcb3e2.png",
     "static/media/home.svg": "/meifc/static/media/home.cdea389951d88256a11671a7dd39ca63.svg",
     "index.html": "/meifc/index.html",
     "static/media/map-pointer.svg": "/meifc/static/media/map-pointer.f29c3c6dfbdd908d9731dfccaa1698a8.svg",
     "static/media/searchIcon.svg": "/meifc/static/media/searchIcon.fa029d6346678eb7c5cc54b5fb8d797b.svg",
     "main.ae982843.css.map": "/meifc/static/css/main.ae982843.css.map",
-    "main.7f649cea.js.map": "/meifc/static/js/main.7f649cea.js.map"
+    "main.5f7846fe.js.map": "/meifc/static/js/main.5f7846fe.js.map"
   },
   "entrypoints": [
     "static/css/main.ae982843.css",
-    "static/js/main.7f649cea.js"
+    "static/js/main.5f7846fe.js"
   ]
 }
