@@ -9,11 +9,16 @@ import "leaflet/dist/leaflet.css";
 import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 import { Container } from "./style";
 import ModalPopup from "../popUp";
 
 import Data from '../../assets/data.json';
 import defaultMarker from '../../assets/imgs/map-pointer.svg'
+
+import icon from "./constants";
+
+import useGeoLocation from "./useGeoLocation";
 
 const defaultCenter = [-27.016526114032356, -48.657304712972156];
 const defaultZoom = 19;
@@ -84,6 +89,8 @@ export default function MapResults() {
     open: true,
   });
 
+  const location = useGeoLocation();
+
   return (
     <Container>
       <Map
@@ -103,13 +110,21 @@ export default function MapResults() {
         <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        maxZoom={19.9}
         />
         <Marker position={ roomObj[0].loc } icon={ markerIcon } >
           <Popup>
-            <span>Seu destino está aqui. No {roomObj[0].andar} andar.</span>
+            <span>Seu destino está aqui: {roomObj[0].title}. No {roomObj[0].andar} andar; Bloco {roomObj[0].bloco}.</span>
             <ModalPopup />
           </Popup>
         </Marker>
+        {location.loaded && !location.error && (
+            <Marker icon={ icon } position={[location.coordinates.lat, location.coordinates.lng]}>
+                <Popup>
+                  <b>Você está aqui.</b>
+                </Popup>
+            </Marker>
+        )}
       </Map>
     </Container>
   );
