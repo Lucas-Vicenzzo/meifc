@@ -11,25 +11,6 @@ export const Container = styled.div`
     flex-grow: 1;
   }
 
-  /* .leaflet-control-zoom-in, .leaflet-control-zoom-out {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(7.31deg, rgba(0, 0, 0, 0.63) 0%, #14142B 100%);
-    box-shadow: -4px 6px 8px -4px rgba(111, 0, 255, 0.29);
-    border-radius: 9px !important;
-    margin-bottom: 5px;
-    width: 40px !important;
-    height: 40px !important;
-    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    span {
-      color: white;
-    }
-
-    &:hover {
-      width: 60px !important;
-    }
-  } */
 
   .leaflet-control-zoom-in, .leaflet-control-zoom-out {
     display: flex;
@@ -80,11 +61,11 @@ export const Container = styled.div`
       transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
-    
+
     &:hover {
       border-radius: 10px;
-      margin-right: -5px;
-      margin-left: 10px;
+
+      margin-left: 20px;
       box-shadow: -3px 5px 4px rgba(0, 0, 0, 0.21);
 
       a {
@@ -101,13 +82,29 @@ export const Container = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
+      gap: 10px
     }
 
-    b {
+    span {
       font-family: 'Rubik', sans-serif;
       font-weight: 300;
       font-size: 14px;
       text-align: left;
+    }
+    button {
+      display: block;
+      color: white;
+      width: fit-content;
+      padding: 10px;
+      height: auto;
+      text-transform: uppercase;
+    }
+
+    @media screen and (min-width: 768px) {
+      button {
+        display: none;
+      }
     }
   }
 
