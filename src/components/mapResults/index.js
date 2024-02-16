@@ -16,7 +16,7 @@ import ModalPopup from "../popUp";
 import Data from '../../assets/data.json';
 import defaultMarker from '../../assets/imgs/map-pointer.svg'
 
-import icon from "./constants";
+import iconC from "./constants";
 
 import useGeoLocation from "./useGeoLocation";
 
